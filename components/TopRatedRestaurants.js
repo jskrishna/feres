@@ -28,92 +28,77 @@ const TopRatedRestaurants = () => {
 
   return (
     <div className='p-4 space-y-6 bg-[#F8F8F8]'>
-      <div className="">
-        <div className='flex justify-between items-center mb-4'>
-          <h3 className="text-[18px] font-[500] text-[#2F2F3F]">Top Rated Restaurants</h3> {/* Set text color */}
-          <Link href="#" passHref className='text-[#979797] text-[16px] font-[500]' >See all
-          </Link>
-        </div>
-        <div className="space-y-6">
-          {restaurants.map((restaurant, index) => (
-            <div className=' bg-white rounded-[13px] p-3'>
-              <div key={index} className="flex relative">
-                <img src={restaurant.image} alt={restaurant.name} className="w-full h-40 rounded-[7px]  object-cover" />
-                <div className='absolute right-[10px] bottom-[10px]'>
-                  <ul className='flex gap-[10px]'>
-                    <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
-                      <img src="/clock-01.svg" alt="" className="w-[20px] object-cover" />
-                      <p className='text-[12px] text-[#1E1E1E]'>{restaurant.time}</p>
-                    </li>
-                    <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
-                      <img src="/scooter-02.svg" alt="" className="w-[20px] object-cover" />
-                      <p className='text-[12px] text-[#1E1E1E]'>{restaurant.deliveryFee}</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex gap-2 justify-between pt-2">
-                <div>
-                  <h4 className="text-[18px] font-bold text-[#2F2F3F]">{restaurant.name}</h4>
-                  <p className="text-[14px] font-[400] text-[#979797]">{restaurant.description}</p>
-                </div>
-                <div className="text-yellow-500"> ★ <span className='text-[16px] text-[#1E1E1E]'> {restaurant.rating}</span></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <div className='flex justify-between items-center mb-4'>
-          <h3 className="text-[18px] font-[500] text-[#2F2F3F]">Grocery stores</h3> {/* Set text color */}
-          <Link href="#" passHref className='text-[#979797] text-[16px] font-[500]' >See all
-          </Link>
-        </div>
-        <div className="space-y-6">
-          {grocery.map((grocery, index) => (
-            <div className=' bg-white rounded-[13px] p-3'>
-              <div key={index} className="flex relative">
-                <img src={grocery.image} alt={grocery.name} className="w-full h-40 rounded-[7px]  object-cover" />
-                <div className='absolute right-[10px] bottom-[10px]'>
-                  <ul className='flex gap-[10px]'>
-                    <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
-                      <img src="/clock-01.svg" alt="" className="w-[20px] object-cover" />
-                      <p className='text-[12px] text-[#1E1E1E]'>{grocery.time}</p>
-                    </li>
-                    <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
-                      <img src="/scooter-02.svg" alt="" className="w-[20px] object-cover" />
-                      <p className='text-[12px] text-[#1E1E1E]'>{grocery.deliveryFee}</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex gap-2 justify-between pt-2">
-                <div>
-                  <h4 className="text-[18px] font-bold text-[#2F2F3F]">{grocery.name}</h4>
-                  <p className="text-[14px] font-[400] text-[#979797]">{grocery.description}</p>
-                </div>
-                <div className="text-yellow-500"> ★ <span className='text-[16px] text-[#1E1E1E]'> {grocery.rating}</span></div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* <div className="space-y-4">
-        {restaurants.map((restaurant, index) => (
-          <div key={index} className="bg-white shadow rounded-lg flex p-4">
-            <img src={restaurant.image} alt={restaurant.name} className="w-20 h-20 object-cover rounded-lg" />
-            <div className="ml-4 flex-1">
-              <h4 className="text-md font-bold text-gray-800">{restaurant.name}</h4>
-              <p className="text-xs text-gray-500">{restaurant.description}</p>
-              <div className="text-xs text-gray-600">{restaurant.time} | {restaurant.deliveryFee}</div>
-              <div className="text-yellow-500">{restaurant.rating} ★</div>
+  <div className="">
+    <div className='flex justify-between items-center mb-4'>
+      <h3 className="text-[18px] font-[500] text-[#2F2F3F]">Top Rated Restaurants</h3>
+      <Link href="#" passHref className='text-[#979797] text-[16px] font-[500]'>See all</Link>
+    </div>
+    <div className="space-y-6">
+      {restaurants.map((restaurant, index) => (
+        <div key={index} className='bg-white rounded-[13px] p-3'> {/* Moved key here */}
+          <div className="flex relative">
+            <img src={restaurant.image} alt={restaurant.name} className="w-full h-40 rounded-[7px] object-cover" />
+            <div className='absolute right-[10px] bottom-[10px]'>
+              <ul className='flex gap-[10px]'>
+                <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
+                  <img src="/clock-01.svg" alt="" className="w-[20px] object-cover" />
+                  <p className='text-[12px] text-[#1E1E1E]'>{restaurant.time}</p>
+                </li>
+                <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
+                  <img src="/scooter-02.svg" alt="" className="w-[20px] object-cover" />
+                  <p className='text-[12px] text-[#1E1E1E]'>{restaurant.deliveryFee}</p>
+                </li>
+              </ul>
             </div>
           </div>
-        ))}
-      </div> */}
-      </div>
+          <div className="flex gap-2 justify-between pt-2">
+            <div>
+              <h4 className="text-[18px] font-bold text-[#2F2F3F]">{restaurant.name}</h4>
+              <p className="text-[14px] font-[400] text-[#979797]">{restaurant.description}</p>
+            </div>
+            <div className="text-yellow-500">★ <span className='text-[16px] text-[#1E1E1E]'>{restaurant.rating}</span></div>
+          </div>
+        </div>
+      ))}
     </div>
+  </div>
+
+  <div>
+    <div className='flex justify-between items-center mb-4'>
+      <h3 className="text-[18px] font-[500] text-[#2F2F3F]">Grocery stores</h3>
+      <Link href="#" passHref className='text-[#979797] text-[16px] font-[500]'>See all</Link>
+    </div>
+    <div className="space-y-6">
+      {grocery.map((grocery, index) => (
+        <div key={index} className='bg-white rounded-[13px] p-3'> {/* Moved key here */}
+          <div className="flex relative">
+            <img src={grocery.image} alt={grocery.name} className="w-full h-40 rounded-[7px] object-cover" />
+            <div className='absolute right-[10px] bottom-[10px]'>
+              <ul className='flex gap-[10px]'>
+                <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
+                  <img src="/clock-01.svg" alt="" className="w-[20px] object-cover" />
+                  <p className='text-[12px] text-[#1E1E1E]'>{grocery.time}</p>
+                </li>
+                <li className='flex gap-2 bg-[#F2FDF8] rounded-full px-3 py-2.5'>
+                  <img src="/scooter-02.svg" alt="" className="w-[20px] object-cover" />
+                  <p className='text-[12px] text-[#1E1E1E]'>{grocery.deliveryFee}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex gap-2 justify-between pt-2">
+            <div>
+              <h4 className="text-[18px] font-bold text-[#2F2F3F]">{grocery.name}</h4>
+              <p className="text-[14px] font-[400] text-[#979797]">{grocery.description}</p>
+            </div>
+            <div className="text-yellow-500">★ <span className='text-[16px] text-[#1E1E1E]'>{grocery.rating}</span></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
   );
 };
 
