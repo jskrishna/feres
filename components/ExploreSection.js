@@ -13,7 +13,7 @@ const ExploreSection = () => {
 
 
   return (
-    <div className="p-4 mt-40">
+    <div className="p-4 custom-pd">
       <h3 className="text-[18px] font-[500] mb-3 text-[#2F2F3F]">Explore Feres</h3>
       <div className="flex gap-[20px] overflow-x-auto scrollbar-hide"
       >

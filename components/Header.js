@@ -15,7 +15,7 @@ const Header = () => {
             alt=''
             width={0}
             height={0}
-            className='md:h-24 h-full w-8'
+            className='w-8'
           />
         </button>
         <div className="text-center">
@@ -24,7 +24,7 @@ const Header = () => {
             alt=''
             width={0}
             height={0}
-            className='h-24 w-4' /></h2>
+            className='w-4' /></h2>
         </div>
         <div className="relative">
           <button className="text-green-600">
@@ -54,7 +54,7 @@ const Header = () => {
               alt=''
               width={0}
               height={0}
-              className='md:h-24 h-full w-6 m-auto'
+              className='md:h-12 w-6 m-auto'
             />
           </div>
         </div>
@@ -64,7 +64,7 @@ const Header = () => {
             alt=''
             width={0}
             height={0}
-            className='md:h-24 h-full w-6 m-auto'
+            className='h-12 w-6 m-auto'
           />
         </button>
       </div>
