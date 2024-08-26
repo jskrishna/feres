@@ -36,7 +36,7 @@ color: #AEAEAE;
 min-height: 50px;
 }
 
-.active-link {
+.category.active-link {
   background: #0AB247;
   color: #fff;
 }

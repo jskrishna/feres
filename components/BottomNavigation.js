@@ -15,7 +15,7 @@ const BottomNavigation = () => {
             alt=''
             width={0}
             height={0}
-            className='md:h-24 h-full w-8 m-auto'
+            className='h-24 w-8 m-auto'
           />
           <p className="mt-[8px] text-[12px] font-[500] text-[#0AB247]">Home</p>
         </div>
@@ -27,7 +27,7 @@ const BottomNavigation = () => {
             alt=''
             width={0}
             height={0}
-            className='md:h-24 h-full w-8 m-auto'
+            className='h-24 w-8 m-auto'
           />
           <p className="mt-[8px] text-[12px] font-[400] text-[#CCCCCC]">Orders</p>
         </div>
@@ -39,7 +39,7 @@ const BottomNavigation = () => {
             alt=''
             width={0}
             height={0}
-            className='md:h-24 h-full w-8 m-auto'
+            className='h-24 w-8 m-auto'
           />
           <p className="mt-[8px] text-[12px] font-[400] text-[#CCCCCC]">Messages</p>
         </div>
@@ -51,7 +51,7 @@ const BottomNavigation = () => {
             alt=''
             width={0}
             height={0}
-            className='md:h-24 h-full w-8 m-auto'
+            className='h-24 w-8 m-auto'
           />
           <p className="mt-[8px] text-[12px] font-[400] text-[#CCCCCC]">Profile</p>
         </div>
